@@ -58,4 +58,15 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
+  bot.ticketTranscript = mongoose.model('transcripts',
+
+    new mongoose.Schema({
+
+        Channel : String,
+
+        Content : Array
+
+    })
+
+)
   .catch((error) => console.log(`${error} did not connect`));
