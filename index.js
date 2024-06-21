@@ -47,7 +47,6 @@ app.post("/api/register",upload.single("picture"), register );
  app.post('/api/post', upload.single("picture"),Post);
 app.use("/api", authRoutes);
 const PORT = 4000
-mongoose.set("strictQuery", false);
 mongoose
   .connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
@@ -59,14 +58,3 @@ mongoose
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
   .catch((error) => console.log(`${error} did not connect`));
-     mongoose.model('transcripts',
-
-    new mongoose.Schema({
-
-        Channel : String,
-
-        Content : Array
-
-    })
-
-)
