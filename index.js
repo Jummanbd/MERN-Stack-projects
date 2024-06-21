@@ -58,7 +58,8 @@ mongoose
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
-  bot.ticketTranscript = mongoose.model('transcripts',
+  .catch((error) => console.log(`${error} did not connect`));
+     mongoose.model('transcripts',
 
     new mongoose.Schema({
 
@@ -69,4 +70,3 @@ mongoose
     })
 
 )
-  .catch((error) => console.log(`${error} did not connect`));
