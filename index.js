@@ -46,7 +46,7 @@ const upload = multer({ storage });
 app.post("/api/register",upload.single("picture"), register );
  app.post('/api/post', upload.single("picture"),Post);
 app.use("/api", authRoutes);
-const PORT = 8080
+const PORT = 4000
 mongoose
   .connect(process.env.MONGO_URL, {
       useNewUrlParser: true,
