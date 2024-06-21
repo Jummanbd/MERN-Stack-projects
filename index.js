@@ -48,12 +48,7 @@ app.post("/api/register",upload.single("picture"), register );
 app.use("/api", authRoutes);
 const PORT = 4000
 mongoose
-  .connect(process.env.MONGO_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useFindAndModify: true,
-  
-  })
+  .connect(process.env.MONGO_URL, { dbName: "demo_db" })
   .then(() => {
     app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
   })
