@@ -49,8 +49,9 @@ app.use("/api", authRoutes);
 const PORT = 8080
 mongoose
   .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      useFindAndModify: true,
   
   })
   .then(() => {
