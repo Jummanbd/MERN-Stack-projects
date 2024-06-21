@@ -48,7 +48,7 @@ app.post("/api/register",upload.single("picture"), register );
 app.use("/api", authRoutes);
 const PORT = 8080
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect('mongodb+srv://data-base-file:102030405060@data-base-file.rsrxtry.mongodb.net/?retryWrites=true&w=majority&appName=data-base-file', {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: true,
