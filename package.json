@@ -27,7 +27,4 @@
     "path": "^0.12.7",
     "url": "^0.11.1"
   },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  }
 }
